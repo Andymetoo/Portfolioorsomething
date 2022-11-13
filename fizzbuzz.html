@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+<script>
+
+function fizzBuzz (number) {
+
+    if (isNaN(number)) {
+        document.write("Hey, you have to submit a number asshole!");
+        return;
+    }
+
+    if (number <= 0) {
+        document.write("That's stupid. Give me something I can work with." + "<br>")
+    }
+    for (i = 1; i < number; i++) {
+        if (i % 3 == 0 && i % 5 == 0) {
+            document.write("Fizzbuzz " + "(" + i + ")");
+            document.write("<br>");
+        } else if (i % 3 == 0) {
+            document.write("Fizz " + "(" + i + ")" + "</br>");
+        } else if (i % 5 == 0) {
+            document.write("Buzz " + "(" + i + ")" + "</br>");
+        } else {
+            document.write(i + "</br>");
+        }
+    }
+        document.write("All done!");
+}
+
+let input = prompt("What number do you want to count up to?: ");
+fizzBuzz(input);
+
+</script>
+</body>
+</html>
